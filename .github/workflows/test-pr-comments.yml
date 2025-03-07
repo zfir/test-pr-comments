@@ -16,4 +16,4 @@ jobs:
         run: |
           echo "Issue number: ${{ github.event.issue.number }}"
           echo "Comment: ${{ github.event.comment.body }}"
-          echo "Is PR?: ${{ github.event.issue.pull_request != null }}"
+          echo "Is it a PR?: ${{ github.event.issue.pull_request != null }}"
