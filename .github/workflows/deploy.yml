@@ -6,7 +6,6 @@ on:
   workflow_dispatch:
   issue_comment:
     types: [created]
-
 jobs:
   percy:
     name: This is a deployment job
