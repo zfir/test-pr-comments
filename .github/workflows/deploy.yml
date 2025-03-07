@@ -1,17 +1,16 @@
-name: "Deploy on Comment"
-
+name: This is a deployment workflow
 on:
-  issue_comment:
-    types: [created]
-
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 jobs:
-  deploy:
+  percy:
+    name: This is a deployment job
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request && contains(github.event.comment.body, '/deploy')
+    defaults:
+      run:
+        working-directory: ./ember
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Deploy
-        run: |
-          echo "Deploying...."
+      - name: Run some commands
+        run: echo "This is a test"
