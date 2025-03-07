@@ -2,7 +2,7 @@ name: This is a deployment workflow
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
   issue_comment:
     types: [created]
